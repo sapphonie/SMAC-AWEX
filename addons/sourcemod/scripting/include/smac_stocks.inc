@@ -109,7 +109,7 @@ stock void StringToLower(char[] input)
 stock bool IsClientNew(int client)
 {
     // Client must be ingame.
-    return IsFakeClient(client) || GetGameTime() > GetClientTime(client);
+    return IsClientInGame(client);
 }
 
 stock bool GetClientAbsVelocity(int client, float velocity[3])
